@@ -163,9 +163,9 @@ This project strengthened my understanding of:
 
 ## Authors
 
-**Abhinav Kumar** - Team Lead
-**Sai Vaishnavi**
-**Kodati Sheetal**
+**Abhinav Kumar** - Team Lead,
+**Sai Vaishnavi**, 
+**Kodati Sheetal**, 
 **Dev Manikanta**
 
 
