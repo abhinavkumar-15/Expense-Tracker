@@ -1,378 +1,174 @@
-# \# Expense Tracker
+# Expense Tracker
 
-# 
+A console-based Expense Tracker application built using Java that helps users manage their personal finances by recording income and expenses, viewing transaction history, deleting entries, and generating financial summaries.
 
-# A console-based Expense Tracker application developed in Java that helps users manage their personal finances by recording income and expenses, viewing transaction history, deleting entries, and generating financial summaries.
+The project demonstrates Object-Oriented Programming (OOP), Java Collections, File Handling, Serialization, and Exception Handling.
 
-# 
+---
 
-# The project demonstrates object-oriented programming concepts, file handling, serialization, collections, and basic financial data analysis.
+## Features
 
-# 
+### Add Financial Entries
+Users can record both income and expense transactions by providing:
 
-# \---
+- Transaction Type (Income/Expense)
+- Amount
+- Category
+- Date
 
-# 
+### View All Entries
+Displays all saved transactions in a structured tabular format.
 
-# \## Features
+### Delete Entries
+Allows users to remove transactions using their index number.
 
-# 
+### Financial Summary
+Generates:
 
-# \### Add Financial Entries
+- Total Income
+- Total Expenses
+- Net Balance
+- Category-wise Breakdown
 
-# 
+### Data Persistence
+All transactions are automatically stored using Java Serialization and remain available even after the application is restarted.
 
-# Users can add both income and expense records by providing:
+---
 
-# 
+## Technologies Used
 
-# \* Transaction Type (Income/Expense)
+- Java
+- Object-Oriented Programming (OOP)
+- Java Collections Framework
+- File Handling
+- Serialization
+- Exception Handling
 
-# \* Amount
+---
 
-# \* Category
+## Project Structure
 
-# \* Date
+```text
+Expense-Tracker
+│
+├── README.md
+│
+└── src
+    └── mypack
+        ├── Expense.java
+        ├── ExpenseManager.java
+        └── ExpenseTracker.java
+```
 
-# 
+### Expense.java
 
-# \### View All Entries
+Represents a single financial transaction.
 
-# 
+Stores:
 
-# Displays all stored transactions in a structured tabular format.
+- Type
+- Amount
+- Category
+- Date
 
-# 
+Implements `Serializable` to support data persistence.
 
-# \### Delete Entries
+### ExpenseManager.java
 
-# 
+Handles all business logic:
 
-# Allows users to remove transactions using their corresponding index.
+- Add Entries
+- Delete Entries
+- View Entries
+- Generate Financial Summaries
+- Save Data
+- Load Data
 
-# 
+### ExpenseTracker.java
 
-# \### Financial Summary
+Contains the menu-driven user interface and manages user interaction.
 
-# 
+---
 
-# Generates:
+## How It Works
 
-# 
+1. The application starts.
+2. Existing records are loaded from `expenses.dat`.
+3. Users select an operation from the menu.
+4. Data is automatically saved whenever changes are made.
+5. Records remain available across multiple sessions.
 
-# \* Total Income
+---
 
-# \* Total Expenses
+## Sample Menu
 
-# \* Net Balance
+```text
+=== EXPENSE TRACKER ===
 
-# \* Category-wise Breakdown
+1. Add Entry
+2. View All Entries
+3. Delete Entry
+4. Show Summary
+5. Exit
+```
 
-# 
+---
 
-# \### Data Persistence
+## Sample Output
 
-# 
+```text
+========== SUMMARY ==========
 
-# All transactions are automatically saved to a local file using Java Serialization.
+Total Income  : 50000.00
+Total Expense : 27500.00
+Net Balance   : 22500.00
 
-# 
+Category-wise Breakdown:
 
-# Data remains available even after restarting the application.
+Salary          : 50000.00
+Food            : 4500.00
+Travel          : 8000.00
+Shopping        : 15000.00
+```
 
-# 
+---
 
-# \---
+## Learning Outcomes
 
-# 
+This project strengthened my understanding of:
 
-# \## Technologies Used
+- Classes and Objects
+- Encapsulation
+- Constructors
+- Java Collections
+- Serialization
+- File Handling
+- Exception Handling
+- Data Persistence
+- Menu-Driven Applications
 
-# 
+---
 
-# \* Java
+## Future Enhancements
 
-# \* Object-Oriented Programming (OOP)
+- Graphical User Interface (JavaFX/Swing)
+- Monthly and Yearly Reports
+- Search and Filter Functionality
+- Budget Planning and Alerts
+- CSV/Excel Export
+- Expense Analytics and Charts
+- Database Integration (MySQL/PostgreSQL)
 
-# \* Java Collections Framework
+---
 
-# \* File Handling
+## Authors
 
-# \* Serialization
+**Abhinav Kumar** - Team Lead
+**Sai Vaishnavi**
+**Kodati Sheetal**
+**Dev Manikanta**
 
-# \* Exception Handling
 
-# 
+Undergraduate Student
 
-# \---
-
-# 
-
-# \## Project Structure
-
-# 
-
-# ```text
-
-# src/
-
-# └── mypack/
-
-# &#x20;   ├── Expense.java
-
-# &#x20;   ├── ExpenseManager.java
-
-# &#x20;   └── ExpenseTracker.java
-
-# ```
-
-# 
-
-# \### Expense.java
-
-# 
-
-# Represents a single financial transaction.
-
-# 
-
-# Stores:
-
-# 
-
-# \* Type
-
-# \* Amount
-
-# \* Category
-
-# \* Date
-
-# 
-
-# Implements Serializable to allow object persistence.
-
-# 
-
-# \### ExpenseManager.java
-
-# 
-
-# Handles all business logic:
-
-# 
-
-# \* Add entries
-
-# \* Delete entries
-
-# \* View entries
-
-# \* Generate summaries
-
-# \* Load saved data
-
-# \* Save data
-
-# 
-
-# \### ExpenseTracker.java
-
-# 
-
-# Contains the main menu-driven user interface and manages user interaction.
-
-# 
-
-# \---
-
-# 
-
-# \## How It Works
-
-# 
-
-# 1\. Application starts.
-
-# 2\. Existing transactions are loaded from `expenses.dat`.
-
-# 3\. User selects an operation:
-
-# 
-
-# &#x20;  \* Add Entry
-
-# &#x20;  \* View Entries
-
-# &#x20;  \* Delete Entry
-
-# &#x20;  \* Show Summary
-
-# &#x20;  \* Exit
-
-# 4\. Data is automatically saved after every modification.
-
-# 
-
-# \---
-
-# 
-
-# \## Sample Menu
-
-# 
-
-# ```text
-
-# === EXPENSE TRACKER ===
-
-# 
-
-# 1\. Add Entry
-
-# 2\. View All Entries
-
-# 3\. Delete Entry
-
-# 4\. Show Summary
-
-# 5\. Exit
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## Sample Summary Output
-
-# 
-
-# ```text
-
-# ========== SUMMARY ==========
-
-# 
-
-# Total Income  : 50000.00
-
-# Total Expense : 27500.00
-
-# Net Balance   : 22500.00
-
-# 
-
-# Category-wise Breakdown:
-
-# 
-
-# Salary          : 50000.00
-
-# Food            : 4500.00
-
-# Travel          : 8000.00
-
-# Shopping        : 15000.00
-
-# ```
-
-# 
-
-# \---
-
-# 
-
-# \## Learning Outcomes
-
-# 
-
-# This project helped strengthen understanding of:
-
-# 
-
-# \* Classes and Objects
-
-# \* Encapsulation
-
-# \* Constructors
-
-# \* Collections (ArrayList, Map)
-
-# \* Serialization
-
-# \* File Handling
-
-# \* Exception Handling
-
-# \* Menu-Driven Applications
-
-# \* Data Persistence
-
-# 
-
-# \---
-
-# 
-
-# \## Future Improvements
-
-# 
-
-# Possible enhancements include:
-
-# 
-
-# \* GUI using JavaFX or Swing
-
-# \* Monthly and yearly reports
-
-# \* Expense filtering by date
-
-# \* Search functionality
-
-# \* Budget planning and alerts
-
-# \* Export data to CSV or Excel
-
-# \* Graphical analytics and charts
-
-# \* Database integration using MySQL
-
-# 
-
-# \---
-
-# 
-
-# \## Authors
-
-# 
-
-# Abhinav Kumar - Team Lead
-
-# Sai Vaishnavi
-
-# Kodati Sheetal
-
-# Dev Manikanta
-
-
-
-
-
-
-
-
-
-# 
-
-# Undergraduate Student
-
-# 
-
-# Interested in Artificial Intelligence, Machine Learning models, Deep Learning and Building Practical Applications.
-
-
-
+Interested in Software Development, Artificial Intelligence, Bioinformatics, and Building Real-World Applications with Java.
